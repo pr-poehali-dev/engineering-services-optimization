@@ -7,57 +7,29 @@ export default function Services() {
     {
       title: "Прокладка наружных тепловых сетей",
       description: "Это процесс укладки трубопроводов, которые используются для транспортировки тепловой энергии от источника (например, котельной) к потребителям (зданиям, сооружениям и т. д.).",
-      icon: "Zap",
-      features: [
-        "Проектирование тепловых сетей",
-        "Укладка трубопроводов различного диаметра",
-        "Монтаж компенсаторов и запорной арматуры",
-        "Теплоизоляция и гидроизоляция",
-        "Испытания и пуско-наладочные работы"
-      ]
+      icon: "Zap"
     },
     {
       title: "Технология алмазного бурения",
       description: "Подходит для таких прочных материалов, как бетон, монолит, кирпич и других материалов.",
-      icon: "Drill",
-      features: [
-        "Бурение отверстий любого диаметра",
-        "Работа с железобетонными конструкциями",
-        "Минимальная вибрация и шум",
-        "Высокая точность выполнения работ",
-        "Возможность работы в стесненных условиях"
-      ]
+      icon: "Drill"
     },
     {
       title: "Проектирование и монтаж внутренних инженерных систем",
       description: "Относится к процессу разработки и установки различных инженерных систем внутри зданий, сооружений или помещений.",
-      icon: "Building",
-      features: [
-        "Системы отопления и вентиляции",
-        "Водоснабжение и водоотведение",
-        "Электрические системы",
-        "Системы кондиционирования",
-        "Автоматизация и диспетчеризация"
-      ]
+      icon: "Building"
     },
     {
       title: "Техника и спецтранспорт",
       description: "Мы предоставляем услуги использования бортового полуприцепа, кран-борт, автовышка.",
-      icon: "Truck",
-      features: [
-        "Бортовой полуприцеп до 20 тонн",
-        "Кран-борт грузоподъемностью до 10 тонн",
-        "Автовышка высотой до 22 метров",
-        "Опытные водители-операторы",
-        "Работа по городу и области"
-      ]
+      icon: "Truck"
     }
   ];
 
   const productionServices = [
     {
       title: "Изготовление воздуховодов",
-      description: "Квадратного/круглого сечения и фасонных части к ним",
+      description: "Изготовление воздуховодов квадратного/круглого сечения и фасонных части к ним",
       icon: "Wind"
     },
     {
@@ -151,42 +123,23 @@ export default function Services() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {engineeringServices.map((service, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-white to-gray-50">
-                <CardHeader className="pb-4">
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-0 bg-white hover:-translate-y-1">
+                <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                       <Icon name={service.icon} size={24} className="text-white" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-xl text-gray-900 mb-2 leading-tight">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">
                         {service.title}
-                      </CardTitle>
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {service.description}
+                      </p>
                     </div>
                   </div>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="space-y-3">
-                    <h4 className="font-semibold text-gray-900 mb-3">Включает в себя:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start space-x-3">
-                          <Icon name="Check" size={16} className="text-primary mt-1 flex-shrink-0" />
-                          <span className="text-gray-600 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <Button variant="ghost" className="mt-6 text-primary hover:text-primary/80 p-0 h-auto font-medium">
-                    <Icon name="ArrowRight" size={16} className="mr-2" />
-                    Получить консультацию
-                  </Button>
                 </CardContent>
               </Card>
             ))}
