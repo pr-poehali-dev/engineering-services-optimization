@@ -85,7 +85,7 @@ export default function Index() {
               <h1 className="text-2xl font-bold text-gray-900">ТехСервис</h1>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#" className="text-gray-600 hover:text-primary transition-colors">Услуги</a>
+              <a href="/services" className="text-gray-600 hover:text-primary transition-colors">Услуги</a>
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">О компании</a>
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">Контакты</a>
             </nav>
